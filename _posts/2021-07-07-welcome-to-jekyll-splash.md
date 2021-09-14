@@ -1,6 +1,6 @@
 ---
-layout: splash
-title:  "Welcome to Jekyll splash!"
+layout: categories
+title:  "Welcome to Jekyll categories!"
 date:   2021-07-07 00:13:14 -0500
 categories: jekyll update test
 ---

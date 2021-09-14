@@ -5,6 +5,7 @@
 .archive {
   margin-top: 1em;
   margin-bottom: 2em;
+  margin-right: $small-gap; // added to even out the archive items in the home
 
   @include breakpoint($large) {
     float: right;
@@ -22,7 +23,7 @@
 adding background, border-radius, transition and border, maybe padding and margin-bottom too */
 .archive__item {
   position: relative;
-  margin-bottom: $gap;
+  margin: $gap $small-gap $small-gap $gap;
   padding: $gap;
   background: #fff;
   border-radius: 8px;
