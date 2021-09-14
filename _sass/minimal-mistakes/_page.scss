@@ -6,8 +6,8 @@
   @include clearfix;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: $small-gap; // changed from 1em
+  padding-right: $small-gap; // changed from 1em
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -15,7 +15,8 @@
   animation-delay: 0.15s;
 
   @include breakpoint($x-large) {
-    max-width: $max-width;
+    max-width: 100%; // changed from $max-width
+    margin-left: $large-gap; // added
   }
 }
 
@@ -39,21 +40,28 @@ body {
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    padding-right: calc(#{$right-sidebar-width-narrow}/4); // changed from straight $right-sidebar-width-narrow
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    // width: calc(100% - #{$right-sidebar-width}); // quoted out to center the x-large page more
+    padding-right: calc(#{$right-sidebar-width}/5); // changed from straight $right-sidebar-width
   }
 
   .page__inner-wrap {
+    background-color: white; // added
     float: left;
     margin-top: 1em;
     margin-left: 0;
     margin-right: 0;
+    padding: $large-gap $gap; // added
+    border-radius: $border-radius; // added
     width: 100%;
     clear: both;
+
+    @include breakpoint($large) {
+      padding: $larger-gap
+    } // added for responsiveness on padding in single posts
 
     .page__content,
     .page__meta,
@@ -514,10 +522,12 @@ body {
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: calc(#{$right-sidebar-width-narrow}/4); // changed from straight $right-sidebar-width-narrow
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
+    padding-right: calc(#{$right-sidebar-width}/4); // changed from straight $right-sidebar-width
   }
 
   a {

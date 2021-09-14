@@ -39,17 +39,36 @@ $type-size-2: 1.953em !default; // ~31.248px
 $type-size-3: 1.563em !default; // ~25.008px
 $type-size-4: 1.25em !default; // ~20px
 $type-size-5: 1em !default; // ~16px
-$type-size-6: 0.75em !default; // ~12px
-$type-size-7: 0.6875em !default; // ~11px
-$type-size-8: 0.625em !default; // ~10px
+$type-size-6: 0.875em !default; // 14px changed from 0.75em
+$type-size-7: 0.75em !default; // 12px changed from 0.6875em
+$type-size-8: 0.6875em !default; // ~11px changed forom 0.625em
 
 /* headline scale */
+/* orginal headline scale
 $h-size-1: 1.563em !default; // ~25.008px
 $h-size-2: 1.25em !default; // ~20px
 $h-size-3: 1.125em !default; // ~18px
 $h-size-4: 1.0625em !default; // ~17px
 $h-size-5: 1.03125em !default; // ~16.5px
-$h-size-6: 1em !default; // ~16px
+$h-size-6: 1em !default; // ~16px */
+
+/* my headline scale */
+$h-size-1: 2.5em !default; // 40px
+$h-size-2: 2em !default; // 32px
+$h-size-3: 1.5em !default; // 24px
+$h-size-4: 1em !default; // 16px
+$h-size-5: 0.875em !default; // 14px
+$h-size-6: 0.75em !default; // 12px
+
+/* 
+Spaces 
+   ========================================================================== */
+$smaller-gap: 0.25em !default; // 4px
+$small-gap: 0.5em !default; // 8px
+$gap: 0.875em !default; // 14px
+$large-gap: 1.5em !default; // 24px 
+$larger-gap: 2em !default; // 32px
+/* this is my own addition for functionality */
 
 /*
    Colors
@@ -61,10 +80,10 @@ $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
-$background-color: #fff !default;
+$background-color: #f5f5f5 !default; /* changed from #fff */
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
-$text-color: $dark-gray !default;
+$text-color: $darker-gray !default; /* changd from $dark-gray */
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
@@ -155,15 +174,15 @@ $max-width: $x-large !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 300px !default;
-$right-sidebar-width-wide: 400px !default;
+$right-sidebar-width-narrow: 20vw !default; // changed from 200px
+$right-sidebar-width: 21vw !default; // changed from 300px
+$right-sidebar-width-wide: 21vw !default; // changed from 400px
 
 /*
    Other
    ========================================================================== */
 
-$border-radius: 4px !default;
+$border-radius: 5px !default; // changed from 4px
 $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;
 $nav-height: 2em !default;
 $nav-toggle-height: 2rem !default;

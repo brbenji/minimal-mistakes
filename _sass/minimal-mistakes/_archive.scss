@@ -18,17 +18,39 @@
   }
 }
 
+/* entries button look
+adding background, border-radius, transition and border, maybe padding and margin-bottom too */
 .archive__item {
   position: relative;
+  margin-bottom: $gap;
+  padding: $gap;
+  background: #fff;
+  border-radius: 8px;
+  transition: transform 0.1s;
+  border: 1px solid $lighter-gray;
 
   a {
     position: relative;
     z-index: 10;
+    color: $text-color;
+    text-decoration: none;
   }
 
   a[rel="permalink"] {
     position: static;
   }
+
+  @include breakpoint($large) {
+    padding: $large-gap;
+    //margin: $large-gap; // this breaks the grid of related pages in $large view
+  }
+
+} /* added color to link css to turn it from $info-color (or really $link-color) to $text-color 
+add breakpoint to increase padding in $large mode */
+
+/* button press effect for archive__items */
+.archive__item:active {
+  transform: scale(0.96);
 }
 
 .archive__subtitle {
@@ -43,14 +65,16 @@
   }
 }
 
+/* added font-size to reduce the size of entry titles */
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin: 0.5em 0 0 0.25em;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 24px;
 
-  a[rel="permalink"]::before {
+    a[rel="permalink"]::before {
     content: '';
     position: absolute;
     left: 0;
@@ -64,7 +88,7 @@
   }
 }
 
-/* remove border*/
+/* remove border */
 .page__content {
   .archive__item-title {
     margin-top: 1em;
@@ -73,8 +97,9 @@
 }
 
 .archive__item-excerpt {
-  margin-top: 0;
+  margin-top: .75em;
   font-size: $type-size-6;
+  color: $gray;
 
   & + p {
     text-indent: 0;
@@ -83,7 +108,7 @@
   a {
     position: relative;
   }
-}
+} /* added color: $gray; for texts changed margin-top from 0em to 0.5em */
 
 .archive__item-teaser {
   position: relative;
@@ -126,9 +151,11 @@
 
 .list__item {
   .page__meta {
-    margin: 0 0 4px;
-    font-size: 0.6em;
-  }
+    margin: 0.5em 0 0 4px;
+    font-size: 0.75em;
+    color: $gray;
+
+  } /* font-size changed from 0.6em and added color: $gray and changed margin top from 0 to 0.5em */
 }
 
 /*
@@ -197,9 +224,9 @@
   }
 
   .page__meta {
-    margin: 0 0 4px;
+    margin: 0.5em 0 0 4px;
     font-size: 0.6em;
-  }
+  } /* added margin top 0.5em to push the meta data lower on grid view of entry buttons */
 
   .page__meta-sep {
     display: block;
