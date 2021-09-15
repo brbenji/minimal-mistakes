@@ -101,6 +101,7 @@ add breakpoint to increase padding in $large mode */
   margin-top: .75em;
   font-size: $type-size-6;
   color: $gray;
+  padding: $small-gap; // to align exerpt with title
 
   & + p {
     text-indent: 0;
@@ -109,7 +110,7 @@ add breakpoint to increase padding in $large mode */
   a {
     position: relative;
   }
-} /* added color: $gray; for texts changed margin-top from 0em to 0.5em */
+} /* added color: $gray; for texts changed margin-top from 0em to 0.75em */
 
 .archive__item-teaser {
   position: relative;
@@ -155,6 +156,7 @@ add breakpoint to increase padding in $large mode */
     margin: 0.5em 0 0 4px;
     font-size: 0.75em;
     color: $gray;
+    padding: $smaller-gap; // for alignment with exerpt and title
 
   } /* font-size changed from 0.6em and added color: $gray and changed margin top from 0 to 0.5em */
 }
