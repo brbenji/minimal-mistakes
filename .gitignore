@@ -27,8 +27,3 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
-
-#mockhowm files
-_posts
-/assets/images
-_config.yml
