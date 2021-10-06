@@ -33,13 +33,7 @@
 adding background, border-radius, transition and border, maybe padding and margin-bottom too */
 .archive__item {
   position: relative;
-<<<<<<< HEAD
-  margin: $gap $small-gap $small-gap $gap;
-  padding: $gap;
-=======
-  //
   padding: $large-gap; // mobile view padding 
->>>>>>> mockhowm
   background: #fff;
   border: 1px solid $lighter-gray;
   border-radius: 8px;
