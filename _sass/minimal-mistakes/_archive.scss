@@ -19,16 +19,27 @@
   }
 }
 
-/* entries button look
+/* adding a class for styling my collections on the home page */
+.collection__home {
+  text-decoration:none;
+  margin: 1em;
+
+  h1 {
+    text-shadow: .125em .15em 2px white;
+  }
+}
+
+/* entries card look
 adding background, border-radius, transition and border, maybe padding and margin-bottom too */
 .archive__item {
   position: relative;
-  margin: $gap $small-gap $small-gap $gap;
-  padding: $gap;
+  //
+  padding: $large-gap; // mobile view padding 
   background: #fff;
+  border: 1px solid $lighter-gray;
   border-radius: 8px;
   transition: transform 0.1s;
-  border: 1px solid $lighter-gray;
+  box-shadow: .125em .5em .5em $light-gray; // new shadow effect
 
   a {
     position: relative;
@@ -41,9 +52,20 @@ adding background, border-radius, transition and border, maybe padding and margi
     position: static;
   }
 
+/* added include for $medium and $small to get a good margin around each grid view*/
   @include breakpoint($large) {
     padding: $large-gap;
-    //margin: $large-gap; // this breaks the grid of related pages in $large view
+    margin: $smaller-gap; // margin around grid view, messes with my list items
+  }
+
+  @include breakpoint($medium) {
+    padding: $large-gap;
+    margin: $smaller-gap; // margin around grid view
+  }
+
+  @include breakpoint($small) {
+    padding: $large-gap;
+    margin: $smaller-gap; // margin around grid view
   }
 
 } /* added color to link css to turn it from $info-color (or really $link-color) to $text-color 
@@ -68,7 +90,7 @@ add breakpoint to increase padding in $large mode */
 
 /* added font-size to reduce the size of entry titles */
 .archive__item-title {
-  margin: 0.5em 0 0 0.25em;
+  margin: 0; // margin around title inside the card
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
@@ -92,16 +114,16 @@ add breakpoint to increase padding in $large mode */
 /* remove border */
 .page__content {
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: 0; // changed from 1em
     border-bottom: none;
   }
 }
 
 .archive__item-excerpt {
-  margin-top: .75em;
+  margin: $small-gap $smaller-gap 0 0; // headroom & a little bottom room
   font-size: $type-size-6;
   color: $gray;
-  padding: $small-gap; // to align exerpt with title
+  padding: 0; // to align exerpt with title
 
   & + p {
     text-indent: 0;
@@ -153,12 +175,12 @@ add breakpoint to increase padding in $large mode */
 
 .list__item {
   .page__meta {
-    margin: 0.5em 0 0 4px;
+    margin: $smaller-gap 0 0 0 ; // headroom
     font-size: 0.75em;
     color: $gray;
-    padding: $smaller-gap; // for alignment with exerpt and title
 
   } /* font-size changed from 0.6em and added color: $gray and changed margin top from 0 to 0.5em */
+  margin: $gap $small-gap; // space around the cards list view margins
 }
 
 /*
@@ -227,7 +249,7 @@ add breakpoint to increase padding in $large mode */
   }
 
   .page__meta {
-    margin: 0.5em 0 0 4px;
+    margin: 0.5em 0 0 0;
     font-size: 0.6em;
   } /* added margin top 0.5em to push the meta data lower on grid view of entry buttons */
 
@@ -240,7 +262,7 @@ add breakpoint to increase padding in $large mode */
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin-top: 0em; // reduced from 0.5em
     font-size: $type-size-5;
   }
 
