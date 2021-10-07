@@ -7,6 +7,7 @@
    ========================================================================== */
 
 .sidebar {
+  padding: $small-gap; // added
   @include clearfix();
   // @include breakpoint(max-width $large) {
   //   /* fix z-index order of follow links */
@@ -17,9 +18,10 @@
   // }
 
   @include breakpoint($large) {
+    padding: $gap; // added
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
-    opacity: 0.75;
+    opacity: 0.85;         // effects the sidebar fading effect changed from 0.75
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     padding-left: $small-gap;
@@ -42,8 +44,9 @@
   }
 
   > * {
+    /* commenting out these margins
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1em; */
   }
 
   h2,
@@ -59,7 +62,7 @@
   li {
     font-family: $sans-serif;
     font-size: $type-size-6;
-    line-height: 1.5;
+    line-height: $gap; // changed from 1.5
   }
 
   img {
@@ -118,8 +121,8 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  width: 4rem; // changed from 36px
+  height: 4rem; // changed from 36px
 
   @include breakpoint($large) {
     display: block;
@@ -128,8 +131,10 @@
   }
 
   img {
-    max-width: 110px;
+    width: 100%; // added
+    max-width: 140px; // changed from 110px
     border-radius: 50%;
+    margin: 0; // added
 
     @include breakpoint($large) {
       padding: 5px;
@@ -141,8 +146,8 @@
 .author__content {
   display: table-cell;
   vertical-align: top;
-  padding-left: 15px;
-  padding-right: 25px;
+  padding-left: $gap; // changed from 15px
+  padding-right: $large-gap; // changed from 25px
   line-height: 1;
 
   @include breakpoint($large) {
@@ -159,24 +164,24 @@
 }
 
 .author__name {
-  margin: 0;
+  margin: $smaller-gap 0 0 0; // changed from 0
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: $small-gap; // changed from 10px
+   // margin-bottom: 10px;
   }
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: $type-size-4; // changed from $type-size-5
 }
 
 .author__bio {
-  margin: 0;
+  margin: -.33em 0 0 0; // changed from 0
 
   @include breakpoint($large) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: $gap; // changed from 10px
+  //  margin-bottom: 20px;
   }
 }
 
@@ -236,7 +241,7 @@
   display: none;
   position: absolute;
   right: 0;
-  margin-top: 15px;
+//  margin-top: 15px;
   padding: 10px;
   list-style-type: none;
   border: 1px solid $border-color;

@@ -42,7 +42,7 @@
 }
 
 .site-logo img {
-  max-height: 2rem;
+  max-height: 4.5rem; // changed from 2rem
 }
 
 .site-title {
@@ -53,11 +53,12 @@
   align-self: center;
   font-weight: bold;
   // z-index: 20;
+  font-size: $type-size-3; // added to change title font size
 }
 
 .site-subtitle {
   display: block;
-  font-size: $type-size-8;
+  font-size: .7rem; // changed from $type-size-8
 }
 
 .masthead__menu {
@@ -80,6 +81,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+    font-size: $h-size-5; // added to adjust size of navigation menu items
   }
 }
 

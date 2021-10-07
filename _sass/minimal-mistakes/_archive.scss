@@ -21,8 +21,16 @@
 
 /* adding a class for styling my collections on the home page */
 .collection__home {
-  text-decoration:none;
-  margin: 1em;
+  margin: $smaller-gap;
+  padding: $gap;
+//  border: 1px solid $lighter-gray;
+//  border-radius: 8px;
+//  box-shadow: .125em .5em .5em $light-gray; // new shadow effect
+//  background: $lighter-gray;
+
+  a {
+    text-decoration:none;
+  }
 
   h1 {
     text-shadow: .125em .15em 2px white;
