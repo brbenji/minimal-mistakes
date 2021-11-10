@@ -23,17 +23,18 @@
 .collection__home {
   margin: $smaller-gap;
   padding: $gap;
-//  border: 1px solid $lighter-gray;
-//  border-radius: 8px;
-//  box-shadow: .125em .5em .5em $light-gray; // new shadow effect
-//  background: $lighter-gray;
 
   a {
     text-decoration:none;
   }
 
   h1 {
-    text-shadow: .125em .15em 2px white;
+    padding: $small-gap;
+    text-shadow: .125em .15em 8px white;
+    border: 2px solid $gray;
+    border-radius: 8px;
+    box-shadow: .125em .25em .1em white; // new shadow effect
+  //  background: $lighter-gray;
   }
 }
 
