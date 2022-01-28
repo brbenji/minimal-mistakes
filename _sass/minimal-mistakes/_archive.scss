@@ -22,7 +22,7 @@
 /* adding a class for styling my collections on the home page */
 .collection__home {
   margin: $smaller-gap;
-  padding: $gap;
+  padding: $small-gap;
   transition: transform 0.1s; // timing for button press effect?
 
   a {
