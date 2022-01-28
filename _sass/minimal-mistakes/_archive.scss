@@ -23,6 +23,7 @@
 .collection__home {
   margin: $smaller-gap;
   padding: $gap;
+  transition: transform 0.1s; // timing for button press effect?
 
   a {
     text-decoration:none;
@@ -35,7 +36,13 @@
     border-radius: 8px;
     box-shadow: .125em .25em .1em white; // new shadow effect
   //  background: $lighter-gray;
+
   }
+}
+
+/* button press effect for home page collection buttons */
+.collection__home:active {
+  transform: scale(0.96);  
 }
 
 /* entries card look
